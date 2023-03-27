@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.js" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>IMAGE SLIDER</h1>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="button">
+            <input type="button" value="prev" id="btnChange1">
+        </div>
+        <div class="sliderContainer">
+            <img width="840px" height="400px" id="lsd1" src="img/road1.jpg"></img>
+        </div>
+   
+        <div class="button1">
+            <input type="button" value="Next" id="btnChange">
+        </div>
+    </div>
+
+    <script>
+        var btnCh = document.getElementById('btnChange');
+        var btnCh1 = document.getElementById('btnChange1');
+        var imgSlider = document.getElementById('lsd1');
+        var images = ['img/road1.jpg', 'img/road2.jpg', 'img/images3.jpg', 'img/images4.jpg'];
+
+        var i = 0;
+        var len = images.length;
+
+        btnCh.onclick = function () {
+            i++
+            if (i < len) {
+                imgSlider.src = images[i];
+
+
+            }
+            else {
+                i = 0;
+                imgSlider.src = images[i];
+
+
+            }
+        }
+        btnCh1.onclick = function () {
+            i--
+            if (i < 0) {
+                imgSlider.src = images[len - 1];
+                i = len - 1;
+            }
+            else {
+                imgSlider.src = images[i];
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
