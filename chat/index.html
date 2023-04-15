@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style1.css" />
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js/bootstrap.min.js" />
+</head>
+
+<body>
+    <form method="get" action="ex.php">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 header" style="background:white"></div>
+            </div>
+            <div class="row">
+                <div class="col-3 nav" style="background:white"></div>
+                <div class="col-3 article" style="background:white">
+
+                    <div class="box">
+                        <div class="txt">
+                            <h1 style="background:blue">Renjith</h1>
+                        </div>
+                        <div class="messages" id="m">
+                            <?php
+
+
+
+                                $fp = fopen('chatlist', 'r');
+                                $data = fread($fp, filesize('chatlist'));
+                                fclose($fp);
+                         
+                                echo "$data";
+                            
+
+                                
+
+                            ?>
+
+                        </div>
+                        <div class="footer">
+                            <textarea type="text" name="msg" cols="60" rows="4"id="t">
+                           </textarea>
+                            <input type="submit" id="a" value="submit">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-3 article1" style="background:white">
+                    <div class="box1">
+                        <div class="txt1">
+                            <h1 style="background:blue">Ram</h1>
+                        </div>
+                        <div class="messages1" id="m1">
+                            <?php
+
+
+
+                                $fp1= fopen('chatlist1', 'r');
+                                
+                                
+                                $data1= fread($fp1, filesize('chatlist1'));
+                                fclose($fp1);
+                                
+                                    echo " $data1";
+                                
+                               
+
+                            ?>
+
+                        </div>
+                        <div class="footer1">
+                        <form name="form1">
+                            <textarea type="text" name="msg1" cols="60" rows="4"id="t1">
+                    </textarea>
+                            <input type="submit" id="b" value="submit"id="btn">
+</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
+
+<script>
+    var t= document.getElementById("t").value;
+    var t1= document.getElementById("t1").value;
+    var btnObj = document.getElementById("btn");
+    btnObj.onclick = function () {
+    if(t1=="")
+    alert("enter ur message");
+}else
+
+</script>

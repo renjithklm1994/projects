@@ -1,0 +1,34 @@
+.header{
+    height:200px;
+    background:lightpink;
+    text-align: center;
+    font-size: 40px;
+    
+}
+.name{
+    height:100px;
+}
+.container{
+   height:20px;
+
+}
+.a{
+    height:300px;
+    border:1px solid black;
+}
+.cname{
+    text-align:right;
+    padding-right: 100px;
+}
+.address{
+    text-align:right;
+    padding-right: 100px;
+}.phone{
+    text-align:right;
+    padding-right: 100px;
+}
+@media only screen and (max-width: 1000px) {
+    body {
+      background-color: lightblue;
+    }
+  }

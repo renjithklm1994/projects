@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>invoice</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="js/bootstrap.min.js"/>
+    </head>
+    <body>
+     
+        <div class="col-12 header">
+          <h2 class="text-center">Invoice</h2>
+          <h6 class="cname">company name:</h6>
+          <h6 class="address">Address:</h6>
+          <h6 class="phone ">Phone:</h6>
+        </div>
+      
+        <diiv class="container">
+
+        <table class="table table-bordered ">
+            <thead>
+              <tr>
+                <th scope="col">sl.no</th>
+                <th scope="col">Description</th>
+                <th scope="col">HSS no</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Rate</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><input type="txt" value="Rice" class="form-control" id="pd"></td>
+                <td><input type="number"  value=456 class="form-control" id="pn"></td>
+                <td><input type="number" class="form-control" id="pq"></td>
+                <td><input type="number" class="form-control" id="pr"></td>
+                <td><input type="number" class="form-control" id="pa0"></td>
+                <td>  <button type="button" class="btn btn-danger" id="btn"onclick="getamount()">Amount</button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><input type="txt" value="Pepsi"class="form-control" id="pd"></td>
+                <td><input type="number" value=234 class="form-control" id="pn"></td>
+                <td><input type="number" class="form-control" id="pq1"></td>
+                <td><input type="number" class="form-control" id="pr1"></td>
+                <td><input type="number" class="form-control" id="pa1"></td>
+                <td>  <button type="button" class="btn btn-danger" id="btn"onclick="getamount()">Amount</button></td>
+              </tr>
+        
+              <tr>
+                <th scope="row">3</th>
+                <td><input type="txt" value="coconut" class="form-control" id="pd"></td>
+                <td><input type="number" value=566 class="form-control" id="pn"></td>
+                <td><input type="number" class="form-control" id="pq2"></td>
+                <td><input type="number" class="form-control"id="pr2"></td>
+                <td><input type="number" class="form-control"id="pa2"></td>
+                <td>  <button type="button" class="btn btn-danger" id="btn"onclick="getamount()">Amount</button></td>
+              </tr><tr>
+                <th scope="row">4</th>
+                <td><input type="txt" class="form-control" value="Soap" id="pd"></td>
+                <td><input type="number"  value= 678 class="form-control" id="pn3"></td>
+                <td><input type="number" class="form-control" id="pq3"></td>
+                <td><input type="number" class="form-control" id="pr3"></td>
+                <td><input type="number" class="form-control" id="pa3"></td>
+                <td>  <button type="button" class="btn btn-danger" id="btn"onclick="getamount()">Amount</button></td>
+              </tr><tr>
+                <th scope="row">5</th>
+                <td><input type="txt" class="form-control" value="Paste"id="pd"></td>
+                <td><input type="number" value=427 class="form-control"id="pn"></td>
+                <td><input type="number" class="form-control"id="pq4"></td>
+                <td><input type="number" class="form-control"id="pr4"></td>
+                <td><input type="number" class="form-control"id="pa4"></td>
+                <td>  <button type="button" class="btn btn-danger"onclick="getamount()">Amount</button></td>
+              </tr>
+        <tr>
+              
+                <td><button type="button" class="btn btn-danger"onclick="gettotal()">Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td ><input type="number" class="form-control"id="pb"></td>
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button type="button" class="btn btn-danger"onclick="getdiscount()">Discount</button></td>
+                <td ><input type="number" class="form-control"id="pc"></td>
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button type="button" class="btn btn-danger"onclick="getpay()">Pay</button></td>
+                <td ><input type="number" class="form-control"id="pp"></td>
+              </tr>
+            </tbody>
+            
+            <script>
+                function getamount(){
+                
+                    var pd=document.getElementById("pd").value;
+                    
+                    var pn=document.getElementById("pn").value;
+                    var pq=document.getElementById("pq").value;
+                    var pr=document.getElementById("pr").value;
+                  
+                    var total=pq*pr;
+                    document.getElementById("pa0").value=total;
+                    var pq1=document.getElementById("pq1").value;
+                    var pr1=document.getElementById("pr1").value;
+                    var total=pq1*pr1;
+                    document.getElementById("pa1").value=total;
+                     var pq2=document.getElementById("pq2").value;
+                    var pr2=document.getElementById("pr2").value;
+                    var total=pq2*pr2;
+                    document.getElementById("pa2").value=total;
+                    var pq3=document.getElementById("pq3").value;
+                    var pr3=document.getElementById("pr3").value;
+                    var total=pq3*pr3;
+                    document.getElementById("pa3").value=total;
+                    var pq4=document.getElementById("pq4").value;
+                    var pr4=document.getElementById("pr4").value;
+                    var total=pq4*pr4;
+                    document.getElementById("pa4").value=total;
+                }
+                function gettotal(){
+                    cal=0;
+                    var pa0=document.getElementById("pa0").value;
+                    var pa1=document.getElementById("pa1").value;
+                    var pa2=document.getElementById("pa2").value;
+                    var pa3=document.getElementById("pa3").value;
+                    var pa4=document.getElementById("pa4").value;
+                 cal=+pa0+ +pa1+ +pa2+ +pa3+ +pa4;
+                    document.getElementById("pb").value=cal;
+                  }
+                function getdiscount(){
+                  var calc=document.getElementById("pb").value;
+                  discount=cal/100;
+                  document.getElementById("pc").value=discount;
+                }
+                function getpay(){
+                  var sum=document.getElementById("pb").value;
+                  var dis=document.getElementById("pc").value;
+                  pay=sum-dis;
+                  document.getElementById("pp").value=pay;
+                }
+            </script>
+      
+
+    </div>
+   
+    </body>
+</html>

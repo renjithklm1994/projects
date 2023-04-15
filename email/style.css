@@ -1,0 +1,23 @@
+.header{
+    height: 200px;
+}
+.nav{
+    margin-top:2px;
+    height: 510px;
+    margin-block-end: 0px;
+}
+.article{
+    margin:2px;
+    height: 500px;
+}
+
+
+ 
+    @media(max-width: 800px) {
+        img,h2,li{
+          display:block;
+          
+        }
+        
+       
+      }
